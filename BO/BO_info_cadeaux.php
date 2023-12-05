@@ -13,11 +13,11 @@
 class infoCadeauxBO {
 
 	// Service de récupératino de la liste des utilisateurs
-	function recupererListeUtilisateurs() {
+	function recupererListeinfocadeaux() {
 
 		/// Appel au DAO correspondant
 		$dao = new infoCadeauxDAO();
-		$listeDo = $dao->recupererListeUtilisateurs();
+		$listeDo = $dao->recupererListeinfocadeaux();
 
 		// Conversion de la liste des DO récupérés en DTO
 		$i = 0;
