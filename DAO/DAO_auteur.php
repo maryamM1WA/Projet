@@ -1,6 +1,6 @@
 <?php
 include('DO/DO_auteur.php');
-use Auteur as  Auteur;
+use AuteurDAO as  AuteurDAO;
 
 class AuteurDAO {
 
@@ -39,11 +39,11 @@ class AuteurDAO {
 		$i = 0;
 
 		foreach ($res as $row) {
-			$util = new Auteur();
+			$util = new Auteur;
 			$util->id_auteur = $row['id_auteur'];
 			$util->nom_auteur= $row['nom_auteur'];
 			$util->prenom_auteur = $row['prenom_auteur'];
-
+			$Auteur[$i]=$util;
 			$i++;
 		}
 
