@@ -1,11 +1,7 @@
 <?php
-<<<<<<< HEAD
 //include('DO\DO_listes.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DO/DO_listes.php');
 
-=======
-include('DO\DO_listes.php');
->>>>>>> 3d50f83ca544ad58ec3673f44ddd1af39d85c2d0
 use ListesDAO as ListesDAO;
 use Listes as Listes;
 
@@ -18,11 +14,7 @@ class ListesDAO {
 
 		// Déclaration des variables de connexion
 		$DB_HOST = "localhost";
-<<<<<<< HEAD
 		$DB_NAME = "projetnoel";
-=======
-		$DB_NAME = "projet_archi";
->>>>>>> 3d50f83ca544ad58ec3673f44ddd1af39d85c2d0
 		$DB_PORT = 3306;
 		$DB_USER = "root";
 		$DB_PSWD = "";
