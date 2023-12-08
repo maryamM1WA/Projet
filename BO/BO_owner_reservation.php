@@ -1,5 +1,7 @@
 <?php
-
+//include('DO\DO_owner_reservation.php');
+//include('DAO\DAO_owner_reservation.php');
+//include('DTO\DTO_owner_reservation.php');
 
   require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DO/DO_owner_reservation.php');
   require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DAO/DAO_owner_reservation.php');

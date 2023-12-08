@@ -3,10 +3,12 @@
 
 require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_info_cadeaux.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_owner_reservation.php');
-
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_auteur.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_listes.php');
 	use infoCadeauxBO as infoCadeauxBO;
   use ownerReservationBO as ownerReservationBO;
-
+	use ListesBO as ListesBO;
+	use AuteurBO as AuteurBO;
 
 ?>
 <html>
@@ -79,6 +81,7 @@ for ($i = 0; $i < $count; $i++) {
 $ownerReservationBO = new ownerReservationBO();
 $res_owner_reservation = $ownerReservationBO->recupererListeownerreservation();
 
+
 // Affichage des données de la table owner_reservation
 echo "<h2>Liste des réservations</h2>";
 foreach ($res_owner_reservation as $owner_reservation) {
@@ -88,6 +91,32 @@ foreach ($res_owner_reservation as $owner_reservation) {
 }
 
 
+
+// Appel à la fonction de récupération des auteurs
+$auteurBO = new AuteurBO();
+$res_auteur = $auteurBO->recupererAuteur();
+
+// Affichage des données de la table auteur
+echo "<h2>Liste des auteurs</h2>";
+foreach ($res_auteur as $auteur) {
+    echo "ID Auteur : " . $auteur->id_auteur . "</br>";
+    echo "Nom de l'auteur : " . $auteur->nom_auteur . "</br>";
+    echo "Prénom de l'auteur : " . $auteur->prenom_auteur . "</br></br>";
+}
+
+
+
+// Appel à la fonction de récupération des listes
+$listesBO = new ListesBO();
+$res_listes = $listesBO->recupererListes();
+
+// Affichage des données de la table listes
+echo "<h2>Liste des listes</h2>";
+foreach ($res_listes as $liste) {
+    echo "ID Liste : " . $liste->id_liste . "</br>";
+    echo "ID Auteur : " . $liste->auteur . "</br></br>";
+
+}
 	// Fermeture de la connexion
 	/*if ($conn != null)
 		$conn->close();*/

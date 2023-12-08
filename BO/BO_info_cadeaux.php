@@ -2,6 +2,10 @@
 
 
   //include('DO\DO_info_cadeaux.php');
+  //include('DAO\DAO_info_cadeaux.php');
+  //include('DTO\DTO_info_cadeaux.php');
+
+
 
   require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DO/DO_info_cadeaux.php');
   require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DAO/DAO_info_cadeaux.php');
