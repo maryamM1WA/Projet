@@ -14,7 +14,7 @@ class ownerReservationDAO {
 		$DB_NAME = "projetnoel";
 		$DB_PORT = 3306;
 		$DB_USER = "root";
-		$DB_PSWD = "root";
+		$DB_PSWD = "";
 
 		try {
 

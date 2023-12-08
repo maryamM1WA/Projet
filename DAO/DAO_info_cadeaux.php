@@ -1,5 +1,6 @@
 <?php
-include('DO\DO_info_cadeaux.php');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DO/DO_info_cadeaux.php');
 use infoCadeauxDAO as infoCadeauxDAO;
 
 class infoCadeauxDAO {

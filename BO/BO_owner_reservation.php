@@ -40,7 +40,7 @@ class ownerReservationBO {
 			$i++;
 		}
 
-		return $OwnerReservationDTO;
+		return $ownerReservationDTO;
 	}
 }
 

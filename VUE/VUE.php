@@ -1,6 +1,9 @@
 <?php
-	include('BO\BO_info_cadeaux.php');
-  include('BO/BO_owner_reservation.php');
+
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_info_cadeaux.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_owner_reservation.php');
+
 	use infoCadeauxBO as infoCadeauxBO;
   use ownerReservationBO as ownerReservationBO;
 
