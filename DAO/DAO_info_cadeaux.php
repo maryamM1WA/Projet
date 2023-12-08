@@ -1,6 +1,6 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/DO/DO_info_cadeaux.php');
-
+include('DO\DO_info_cadeaux.php');
+use infoCadeauxDAO as infoCadeauxDAO;
 
 class infoCadeauxDAO {
 
@@ -10,11 +10,11 @@ class infoCadeauxDAO {
 	function connectionBdd() {
 
 		// Déclaration des variables de connexion
-		$DB_HOST = "127.0.0.1";
-		$DB_NAME = "projetnoel";
+		$DB_HOST = "localhost";
+		$DB_NAME = "projet_archi";
 		$DB_PORT = 3306;
 		$DB_USER = "root";
-		$DB_PSWD = "root";
+		$DB_PSWD = "";
 
 		try {
 
@@ -39,7 +39,7 @@ class infoCadeauxDAO {
 		$i = 0;
 
 		foreach ($res as $row) {
-			$util = new infoCadeaux();
+			$util = new infoCadeaux;
 			$util->id_cadeau = $row['id_cadeau'];
 			$util->id_owner = $row['id_owner'];
 			$util->id_liste = $row['id_liste'];
@@ -47,7 +47,6 @@ class infoCadeauxDAO {
       $util->resume = $row['resume'];
       $util->prix = $row['prix'];
       $util->image = $row['image'];
-      $util->nom = $row['nom'];
       $util->date_debut_reservation = $row['date_debut_reservation'];
       $util->date_fin_reservation = $row['date_fin_reservation'];
       $util->etat_reservation = $row['etat_reservation'];
