@@ -1,7 +1,7 @@
 <?php
 
 
-  include('DO/DO_auteur.php');
+  //include('DO/DO_auteur.php');
   include('DAO/DAO_auteur.php');
   include( 'DTO/DTO_auteur.php');
 
@@ -22,13 +22,13 @@ class AuteurBO {
 		// Conversion de la liste des DO récupérés en DTO
 		$i = 0;
 		foreach ($listeDo as $do) {
-			$dto = new AuteurDTO();
+			$dto = new AuteurDTO;
 			$dto->id_auteur = $do->id_auteur;
 			$dto->nom_auteur = $do->nom_auteur;
 			$dto->prenom_auteur = $do->prenom_auteur;
 
 
-			$infoCadeauxDTO[$i] = $dto;
+			$AuteurDTO[$i] = $dto;
 
 
 
