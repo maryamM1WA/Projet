@@ -1,6 +1,9 @@
 <?php
 	include('BO\BO_info_cadeaux.php');
-	use infoCadeauxBO as infoCadeauxBOO;
+  include('BO/BO_owner_reservation.php');
+	use infoCadeauxBO as infoCadeauxBO;
+  use ownerReservationBO as ownerReservationBO;
+
 
 ?>
 <html>
@@ -68,6 +71,17 @@ for ($i = 0; $i < $count; $i++) {
 	//echo " </div>";
 
 
+}
+// Appel à la fonction de récupération de la liste des réservations
+$ownerReservationBO = new ownerReservationBO();
+$res_owner_reservation = $ownerReservationBO->recupererListeownerreservation();
+
+// Affichage des données de la table owner_reservation
+echo "<h2>Liste des réservations</h2>";
+foreach ($res_owner_reservation as $owner_reservation) {
+    echo "ID Owner : " . $owner_reservation->id_owner . "</br>";
+    echo "Nom du propriétaire : " . $owner_reservation->nom_owner . "</br>";
+    echo "Prénom du propriétaire : " . $owner_reservation->prenom_owner . "</br></br>";
 }
 
 

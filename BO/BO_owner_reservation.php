@@ -22,7 +22,7 @@ class ownerReservationBO {
 		// Conversion de la liste des DO récupérés en DTO
 		$i = 0;
 		foreach ($listeDo as $do) {
-			$dto = new ownerReservationDTO();
+			$dto = new ownerReservationDTO;
 			$dto->id_owner = $do->id_owner;
 			$dto->nom_owner = $do->nom_owner;
 			$dto->prenom_owner = $do->prenom_owner;

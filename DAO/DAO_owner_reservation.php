@@ -39,7 +39,7 @@ class ownerReservationDAO {
 		$i = 0;
 
 		foreach ($res as $row) {
-			$util = new ownerReservation();
+			$util = new ownerReservation;
 			$util->id_owner = $row['id_owner'];
 			$util->nom_owner = $row['nom_owner'];
 			$util->prenom_owner = $row['prenom_owner'];

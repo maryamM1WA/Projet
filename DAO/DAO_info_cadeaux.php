@@ -11,7 +11,7 @@ class infoCadeauxDAO {
 
 		// Déclaration des variables de connexion
 		$DB_HOST = "localhost";
-		$DB_NAME = "projet_archi";
+		$DB_NAME = "projetnoel";
 		$DB_PORT = 3306;
 		$DB_USER = "root";
 		$DB_PSWD = "";
