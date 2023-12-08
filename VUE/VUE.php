@@ -1,12 +1,17 @@
 <?php
 
 
-require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_info_cadeaux.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_owner_reservation.php');
+//require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_info_cadeaux.php');
+//require_once($_SERVER['DOCUMENT_ROOT'] . '/Projet/BO/BO_owner_reservation.php');
 
-	use infoCadeauxBO as infoCadeauxBO;
-  use ownerReservationBO as ownerReservationBO;
-
+  include('BO\BO_info_cadeaux.php');
+  use infoCadeauxBO as infoCadeauxBO;
+  include('BO\BO_listes.php');
+  use ListesBO as ListesBO;
+  include('BO\BO_auteur.php');
+  use AuteurBO as AuteurBO;
+  include('BO\BO_owner_reservation.php');
+	use ownerReservationBO as ownerReservationBO;
 
 ?>
 <html>
@@ -52,7 +57,7 @@ $count = count($res_info_cadeau);
 for ($i = 0; $i < $count; $i++) {
 
 
-
+	echo "<h2>Liste des informations des cadeaux</h2>";
 //." <button type='button' name='button'onclick={Affiche(". $i .")}>Détails</button></br>  "
 	//echo " id_liste  : ". $res_info_cadeau[$i]->id_liste ." </br>  ";
 	echo " Nom du cadeau  : ". $res_info_cadeau[$i]->nom . "</br>";
@@ -86,6 +91,30 @@ foreach ($res_owner_reservation as $owner_reservation) {
     echo "Nom du propriétaire : " . $owner_reservation->nom_owner . "</br>";
     echo "Prénom du propriétaire : " . $owner_reservation->prenom_owner . "</br></br>";
 }
+
+
+$bdd1 = new ListesBO;
+$res_listes = $bdd1->recupererListes();
+
+
+echo "<h2>Liste des Listes</h2>";
+$count = count($res_listes);
+for ($i = 0; $i < $count; $i++) {
+	echo " id liste  : ". $res_listes[$i]->id_liste . "</br>";
+	echo " auteur  : ". $res_listes[$i]->auteur . "</br>";
+}
+
+
+$bdd2 = new AuteurBO;
+$res_auteur = $bdd2->recupererAuteur();
+
+echo "<h2>Liste des Auteurs</h2>";
+$count = count($res_auteur);
+for ($i = 0; $i < $count; $i++) {
+	echo " id auteur  : ". $res_auteur[$i]->id_auteur . "</br>";
+	echo " auteur  : ". $res_auteur[$i]->nom_auteur . "</br>". $res_auteur[$i]->prenom_auteur;
+}
+
 
 
 	// Fermeture de la connexion
