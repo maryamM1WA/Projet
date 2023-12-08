@@ -1,6 +1,7 @@
 <?php
 
 
+<<<<<<< HEAD
 //include('DO\DO_listes.php');
 //include('DAO\DAO_listes.php');
 //include('DTO\DTO_listes.php');
@@ -10,6 +11,13 @@
 
 
 	//use Listes as Listes;
+=======
+  //include('DO\DO_info_cadeaux.php');
+  include('DAO\DAO_listes.php');
+  include('DTO\DTO_listes.php');
+
+	use Listes as Listes;
+>>>>>>> 3d50f83ca544ad58ec3673f44ddd1af39d85c2d0
 	use ListesDAO as ListesDAO;
 	use ListesDTO as ListesDTO;
 
