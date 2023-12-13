@@ -11,6 +11,7 @@ Class infoCadeauxDTO{
   public $image;
   public $date_debut_reservation;
   public $date_fin_reservation;
+  public $date_de_reservation;
   public $etat_reservation;
 
 
