@@ -56,8 +56,8 @@ prenom_owner VARCHAR(50)
 /** insertion dans la  table info_cadeaux**/
 
 
-insert into info_cadeaux(id_cadeau,id_owner,id_liste,nom,resume,prix,image,date_debut_reservation,date_fin_reservation,date_de_reservation,etat_reservation) VALUES (0,NULL,0,'Noël','telephone','Iphone Appple 5G et 65 pouces',500,'image.png','2023-12-10','2023-12-15',NULL,FALSE);
-insert into info_cadeaux(id_cadeau,id_owner,id_liste,nom,resume,prix,image,date_debut_reservation,date_fin_reservation,date_de_reservation,etat_reservation) VALUES (1,0,NULL,0,'Xbox','Console pour jeu video',700,'image1.png','2023-12-10','2023-12-15',NULL,FALSE);
+insert into info_cadeaux(id_cadeau,id_owner,id_liste,nom,resume,prix,image,date_debut_reservation,date_fin_reservation,date_de_reservation,etat_reservation) VALUES (0,NULL,0,'telephone','Iphone Appple 5G et 65 pouces',500,'image.png','2023-12-10','2023-12-15',NULL,FALSE);
+insert into info_cadeaux(id_cadeau,id_owner,id_liste,nom,resume,prix,image,date_debut_reservation,date_fin_reservation,date_de_reservation,etat_reservation) VALUES (1,NULL,0,'Xbox','Console pour jeu video',700,'image1.png','2023-12-10','2023-12-15',NULL,FALSE);
 
 
 
