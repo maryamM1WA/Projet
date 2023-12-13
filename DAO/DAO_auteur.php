@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 //include('DO\DO_auteur.php');
 
@@ -56,7 +55,7 @@ class AuteurDAO {
 }
 
 ?>
-=======
+
 <?php
 include('DO/DO_auteur.php');
 use AuteurDAO as  AuteurDAO;
@@ -111,4 +110,4 @@ class AuteurDAO {
 }
 
 ?>
->>>>>>> 3d50f83ca544ad58ec3673f44ddd1af39d85c2d0
+
