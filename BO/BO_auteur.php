@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 
 //include('DO\DO_info_cadeaux.php');
@@ -46,7 +46,7 @@ class AuteurBO {
 }
 
 ?>
-=======
+
 <?php
 
 
@@ -92,4 +92,3 @@ class AuteurBO {
 }
 
 ?>
->>>>>>> 3d50f83ca544ad58ec3673f44ddd1af39d85c2d0
